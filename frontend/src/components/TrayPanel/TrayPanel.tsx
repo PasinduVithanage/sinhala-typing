@@ -4,9 +4,10 @@ import { StatusCard } from './StatusCard'
 import { QuickActions } from './QuickActions'
 import { useEngineStore } from '../../store/engineStore'
 import { TextAnalyzer } from '../Analyzer/TextAnalyzer'
+import { PhoneticGuide } from '../PhoneticGuide/PhoneticGuide'
 import * as App from '../../../wailsjs/go/ipc/App'
 
-type View = 'main' | 'analyze'
+type View = 'main' | 'analyze' | 'guide'
 
 interface TrayPanelProps {
   onSettings: () => void
@@ -31,6 +32,10 @@ export function TrayPanel({ onSettings }: TrayPanelProps) {
 
   if (view === 'analyze') {
     return <TextAnalyzer onBack={() => setView('main')} />
+  }
+
+  if (view === 'guide') {
+    return <PhoneticGuide onBack={() => setView('main')} />
   }
 
   return (
@@ -66,7 +71,7 @@ export function TrayPanel({ onSettings }: TrayPanelProps) {
         </select>
       </div>
 
-      <QuickActions onFixClipboard={handleFixClipboard} onAnalyze={() => setView('analyze')} />
+      <QuickActions onFixClipboard={handleFixClipboard} onAnalyze={() => setView('analyze')} onGuide={() => setView('guide')} />
 
       {fixResult && (
         <div className="text-xs text-[#3ECF8E] bg-[#1A1A20] border border-[#3ECF8E]/30 rounded-lg px-3 py-2">
