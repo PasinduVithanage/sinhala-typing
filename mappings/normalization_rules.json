@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "description": "Unicode normalization repair rules for Sinhala text"
+  },
+  "rules": [
+    {
+      "id": "kombuwa_before_base",
+      "name": "Kombuwa Before Base",
+      "pattern": "U+0DD9 before consonant",
+      "fix": "swap order — consonant must precede U+0DD9",
+      "severity": "error"
+    },
+    {
+      "id": "vowel_sign_before_base",
+      "name": "Vowel Sign Before Base",
+      "pattern": "any matra before consonant",
+      "fix": "swap order — consonant must precede matra",
+      "severity": "error"
+    },
+    {
+      "id": "double_virama",
+      "name": "Double Virama",
+      "pattern": "U+0DCA U+0DCA",
+      "fix": "collapse to single U+0DCA",
+      "severity": "warning"
+    },
+    {
+      "id": "orphaned_virama",
+      "name": "Orphaned Virama",
+      "pattern": "U+0DCA not preceded by consonant",
+      "fix": "remove U+0DCA",
+      "severity": "error"
+    },
+    {
+      "id": "rakar_missing_zwj",
+      "name": "Rakar Missing ZWJ",
+      "pattern": "consonant + U+0DCA + U+0DBB without U+200D",
+      "fix": "insert U+200D before U+0DBB",
+      "severity": "warning"
+    }
+  ]
+}

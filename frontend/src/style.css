@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  background: #0F0F12;
+  color: #F0F0F5;
+}
+
+[dir="auto"], textarea, input {
+  font-family: 'Iskoola Pota', 'Noto Serif Sinhala', 'Noto Sans Sinhala', 'Segoe UI', sans-serif;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #1A1A20; }
+::-webkit-scrollbar-thumb { background: #2A2A38; border-radius: 2px; }

@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "id": "phonetic-v1",
+    "name": "Sinhala Phonetic",
+    "version": "1.0.0",
+    "description": "Phonetic transliteration based on English pronunciation"
+  },
+  "settings": {
+    "use_zwj_clusters": true,
+    "auto_fix_kombuwa": true,
+    "commit_on_space": true,
+    "commit_on_punctuation": true
+  },
+  "independent_vowels": {
+    "a":  {"unicode": "U+0D85", "sinhala": "අ"},
+    "aa": {"unicode": "U+0D86", "sinhala": "ආ"},
+    "A":  {"unicode": "U+0D86", "sinhala": "ආ"},
+    "ae": {"unicode": "U+0D87", "sinhala": "ඇ"},
+    "i":  {"unicode": "U+0D89", "sinhala": "ඉ"},
+    "ii": {"unicode": "U+0D8A", "sinhala": "ඊ"},
+    "u":  {"unicode": "U+0D8B", "sinhala": "උ"},
+    "uu": {"unicode": "U+0D8C", "sinhala": "ඌ"},
+    "e":  {"unicode": "U+0D91", "sinhala": "එ"},
+    "ee": {"unicode": "U+0D92", "sinhala": "ඒ"},
+    "o":  {"unicode": "U+0D94", "sinhala": "ඔ"},
+    "oo": {"unicode": "U+0D95", "sinhala": "ඕ"},
+    "au": {"unicode": "U+0D96", "sinhala": "ඖ"}
+  },
+  "consonants": {
+    "k":  {"unicode": "U+0D9A", "sinhala": "ක", "category": "velar"},
+    "kh": {"unicode": "U+0D9B", "sinhala": "ඛ", "category": "velar_aspirated"},
+    "g":  {"unicode": "U+0D9C", "sinhala": "ග", "category": "velar"},
+    "gh": {"unicode": "U+0D9D", "sinhala": "ඝ", "category": "velar_aspirated"},
+    "ng": {"unicode": "U+0D9E", "sinhala": "ඞ", "category": "velar_nasal"},
+    "c":  {"unicode": "U+0DA0", "sinhala": "ච", "category": "palatal"},
+    "j":  {"unicode": "U+0DA2", "sinhala": "ජ", "category": "palatal"},
+    "jh": {"unicode": "U+0DA3", "sinhala": "ඣ", "category": "palatal_aspirated"},
+    "ny": {"unicode": "U+0DA4", "sinhala": "ඤ", "category": "palatal_nasal"},
+    "T":  {"unicode": "U+0DA7", "sinhala": "ට", "category": "retroflex"},
+    "Th": {"unicode": "U+0DA8", "sinhala": "ඨ", "category": "retroflex_aspirated"},
+    "D":  {"unicode": "U+0DA9", "sinhala": "ඩ", "category": "retroflex"},
+    "Dh": {"unicode": "U+0DAA", "sinhala": "ඪ", "category": "retroflex_aspirated"},
+    "N":  {"unicode": "U+0DAB", "sinhala": "ණ", "category": "retroflex_nasal"},
+    "t":  {"unicode": "U+0DAD", "sinhala": "ත", "category": "dental"},
+    "th": {"unicode": "U+0DAE", "sinhala": "ථ", "category": "dental_aspirated"},
+    "d":  {"unicode": "U+0DAF", "sinhala": "ද", "category": "dental"},
+    "dh": {"unicode": "U+0DB0", "sinhala": "ධ", "category": "dental_aspirated"},
+    "n":  {"unicode": "U+0DB1", "sinhala": "න", "category": "dental_nasal"},
+    "p":  {"unicode": "U+0DB4", "sinhala": "ප", "category": "bilabial"},
+    "ph": {"unicode": "U+0DB5", "sinhala": "ඵ", "category": "bilabial_aspirated"},
+    "b":  {"unicode": "U+0DB6", "sinhala": "බ", "category": "bilabial"},
+    "bh": {"unicode": "U+0DB7", "sinhala": "භ", "category": "bilabial_aspirated"},
+    "m":  {"unicode": "U+0DB8", "sinhala": "ම", "category": "bilabial_nasal"},
+    "mb": {"unicode": "U+0DB9", "sinhala": "ඹ", "category": "bilabial_nasal"},
+    "y":  {"unicode": "U+0DBA", "sinhala": "ය", "category": "approximant"},
+    "r":  {"unicode": "U+0DBB", "sinhala": "ර", "category": "trill"},
+    "l":  {"unicode": "U+0DBD", "sinhala": "ල", "category": "lateral"},
+    "v":  {"unicode": "U+0DC0", "sinhala": "ව", "category": "labiodental"},
+    "w":  {"unicode": "U+0DC0", "sinhala": "ව", "category": "labiodental"},
+    "sh": {"unicode": "U+0DC1", "sinhala": "ශ", "category": "sibilant"},
+    "Sh": {"unicode": "U+0DC2", "sinhala": "ෂ", "category": "retroflex_sibilant"},
+    "s":  {"unicode": "U+0DC3", "sinhala": "ස", "category": "sibilant"},
+    "h":  {"unicode": "U+0DC4", "sinhala": "හ", "category": "glottal"},
+    "L":  {"unicode": "U+0DC5", "sinhala": "ළ", "category": "retroflex_lateral"},
+    "f":  {"unicode": "U+0DC6", "sinhala": "ෆ", "category": "labiodental"}
+  },
+  "vowel_signs": {
+    "a":  {"unicode": "U+0DCF", "sinhala": "ා", "name": "aa_sign"},
+    "i":  {"unicode": "U+0DD2", "sinhala": "ි", "name": "ispili"},
+    "I":  {"unicode": "U+0DD3", "sinhala": "ී", "name": "papili"},
+    "u":  {"unicode": "U+0DD4", "sinhala": "ු", "name": "u_sign"},
+    "U":  {"unicode": "U+0DD6", "sinhala": "ූ", "name": "uu_sign"},
+    "E":  {"unicode": "U+0DD9", "sinhala": "ෙ", "name": "kombuwa", "prebase": true},
+    "ee": {"unicode": "U+0DDA", "sinhala": "ේ", "name": "deerga_kombuwa"},
+    "o":  {"sequence": ["U+0DD9", "U+0DCF"], "sinhala": "ො", "name": "o_sign"},
+    "oo": {"sequence": ["U+0DD9", "U+0DDD"], "sinhala": "ෝ", "name": "oo_sign"}
+  },
+  "special": {
+    "H":  {"unicode": "U+0DCA", "sinhala": "්", "name": "al_lakuna"},
+    "^":  {"unicode": "U+0DCA", "sinhala": "්", "name": "al_lakuna"},
+    "M":  {"unicode": "U+0D82", "sinhala": "ං", "name": "anusvaraya"},
+    "H2": {"unicode": "U+0D83", "sinhala": "ඃ", "name": "visargaya"}
+  },
+  "clusters": {
+    "rakar": {
+      "pattern": "consonant + al_lakuna + r",
+      "unicode_sequence": "consonant + U+0DCA + U+200D + U+0DBB",
+      "example": "kHr → ක්‍ර"
+    },
+    "yansaya": {
+      "pattern": "consonant + al_lakuna + y",
+      "unicode_sequence": "consonant + U+0DCA + U+200D + U+0DBA",
+      "example": "kHy → ක්‍ය"
+    },
+    "repaya": {
+      "pattern": "r + al_lakuna + consonant",
+      "unicode_sequence": "U+0DBB + U+0DCA + U+200D + consonant",
+      "example": "rHk → ර්‍ක"
+    }
+  }
+}
