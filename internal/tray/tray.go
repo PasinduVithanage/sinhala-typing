@@ -41,9 +41,9 @@ func (t *Tray) Run()  { systray.Run(t.onReady, t.onExit) }
 func (t *Tray) Stop() { systray.Quit() }
 
 func (t *Tray) onReady() {
-	// Use a minimal embedded icon — production build replaces with real assets
 	systray.SetIcon(iconBytes(IconInactive))
 	systray.SetTooltip("Sinhala Assistant — Inactive")
+	systray.SetTitle("Sinhala Assistant")
 
 	t.menuToggle = systray.AddMenuItem("Enable Sinhala Typing", "Toggle the keyboard engine")
 	mSettings := systray.AddMenuItem("Settings", "Open settings panel")

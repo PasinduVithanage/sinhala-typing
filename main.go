@@ -3,6 +3,7 @@ package main
 import (
 	"embed"
 	"log"
+	"os"
 	"runtime"
 
 	"github.com/wailsapp/wails/v2"
@@ -11,6 +12,7 @@ import (
 	winopts "github.com/wailsapp/wails/v2/pkg/options/windows"
 
 	"sinhala-assistant/internal/ipc"
+	"sinhala-assistant/internal/singleinstance"
 )
 
 //go:embed all:frontend/dist
@@ -18,6 +20,12 @@ var assets embed.FS
 
 func main() {
 	runtime.LockOSThread() // required for Windows message loops
+
+	if !singleinstance.Acquire() {
+		// Another instance is already running in the system tray — exit silently.
+		os.Exit(0)
+	}
+	defer singleinstance.Release()
 
 	app := ipc.NewApp()
 
